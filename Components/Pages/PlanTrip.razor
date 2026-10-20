@@ -1,0 +1,53 @@
+@page "/plan"
+@using System.ComponentModel.DataAnnotations
+<PageTitle>Plan my trip | Visit Cebu</PageTitle>
+
+<section class="mx-auto max-w-xl px-6 py-14">
+    <h1 class="text-4xl md:text-5xl">Plan my trip</h1>
+
+    @if (sent)
+    {
+        <div class="mt-8 rounded-2xl bg-sun p-6" role="status">
+            <p class="text-xl font-bold">Thanks, @model.Name!</p>
+            <p class="mt-2">We'll send a @model.Days-day @model.Style.ToLower() plan to @model.Email.</p>
+            <button class="btn-sea mt-4" @onclick="Reset">Plan another trip</button>
+        </div>
+    }
+    else
+    {
+        <EditForm Model="model" OnValidSubmit="() => sent = true" class="mt-8 space-y-5">
+            <DataAnnotationsValidator />
+            <label class="block font-bold">Your name
+                <InputText class="mt-1 w-full rounded-xl border-2 border-sea p-3 font-normal" @bind-Value="model.Name" />
+                <ValidationMessage For="() => model.Name" class="text-sm text-hibiscus" />
+            </label>
+            <label class="block font-bold">Email
+                <InputText class="mt-1 w-full rounded-xl border-2 border-sea p-3 font-normal" @bind-Value="model.Email" />
+                <ValidationMessage For="() => model.Email" class="text-sm text-hibiscus" />
+            </label>
+            <label class="block font-bold">Number of days
+                <InputNumber class="mt-1 w-full rounded-xl border-2 border-sea p-3 font-normal" @bind-Value="model.Days" />
+                <ValidationMessage For="() => model.Days" class="text-sm text-hibiscus" />
+            </label>
+            <label class="block font-bold">Trip style
+                <InputSelect class="mt-1 w-full rounded-xl border-2 border-sea bg-white p-3 font-normal" @bind-Value="model.Style">
+                    <option>History</option><option>Beaches</option><option>Nature</option><option>Adventure</option>
+                </InputSelect>
+            </label>
+            <button type="submit" class="btn-sun">Send my plan</button>
+        </EditForm>
+    }
+</section>
+
+@code {
+    private class Trip
+    {
+        [Required(ErrorMessage = "Enter your name.")] public string Name { get; set; } = "";
+        [Required(ErrorMessage = "Enter your email."), EmailAddress(ErrorMessage = "Enter a valid email address.")] public string Email { get; set; } = "";
+        [Range(1, 14, ErrorMessage = "Choose between 1 and 14 days.")] public int Days { get; set; } = 4;
+        public string Style { get; set; } = "Adventure";
+    }
+    private Trip model = new();
+    private bool sent;
+    private void Reset() { model = new(); sent = false; }
+}

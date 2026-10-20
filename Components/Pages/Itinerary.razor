@@ -1,0 +1,49 @@
+@page "/itinerary"
+<PageTitle>4-day itinerary | Visit Cebu</PageTitle>
+
+<section class="mx-auto max-w-4xl px-6 py-14">
+    <h1 class="text-4xl md:text-6xl">Four days in Cebu</h1>
+    <p class="mt-4 text-lg">Pick a day to see the plan.</p>
+
+    <div class="mt-8 flex flex-wrap gap-2" role="tablist">
+        @for (var i = 0; i < days.Length; i++)
+        {
+            var idx = i;
+            <button role="tab" aria-selected="@(idx == current)" class="chip @(idx == current ? "chip-on" : "")" @onclick="() => current = idx">Day @(idx + 1)</button>
+        }
+    </div>
+
+    <div class="mt-8 rounded-2xl border-2 border-sea bg-white p-6 md:p-8" role="tabpanel">
+        <h2 class="text-3xl">@days[current].Title</h2>
+        <ol class="mt-6 space-y-5 border-l-4 border-sun pl-6">
+            @foreach (var (time, what) in days[current].Stops)
+            {
+                <li><p class="font-bold text-lagoon">@time</p><p>@what</p></li>
+            }
+        </ol>
+    </div>
+</section>
+
+@code {
+    private int current;
+    private record Day(string Title, (string, string)[] Stops);
+    private readonly Day[] days =
+    {
+        new("Cebu City history walk", new[] {
+            ("Morning", "Magellan's Cross and the Basilica del Santo Niño."),
+            ("Midday", "Fort San Pedro, then lunch of lechon and puso nearby."),
+            ("Late afternoon", "Temple of Leah in Busay for the city view at sunset.") }),
+        new("Mactan island hopping", new[] {
+            ("Morning", "Lapu-Lapu Shrine on Mactan Island."),
+            ("Midday", "Boat tour to nearby islands for snorkelling and a seafood lunch."),
+            ("Afternoon", "Relax at a Mactan beach club.") }),
+        new("Moalboal and Kawasan", new[] {
+            ("Early morning", "Drive south to Moalboal for the sardine run and sea turtles."),
+            ("Midday", "Continue to Badian for Kawasan Falls."),
+            ("Afternoon", "Optional canyoneering with a licensed guide, then head back.") }),
+        new("Slow last day", new[] {
+            ("Morning", "Sleep in, then breakfast with local coffee and dried mangoes."),
+            ("Afternoon", "Pasalubong shopping for souvenirs."),
+            ("Evening", "Fresh seafood dinner by the water before your flight.") })
+    };
+}
