@@ -1,0 +1,35 @@
+<article class="flex flex-col overflow-hidden rounded-2xl border-2 border-sea bg-white">
+    @if (D.Image is not null)
+    {
+        <img src="@D.Image" alt="@D.Name in @D.Area" class="h-52 w-full object-cover" loading="lazy" />
+    }
+    else
+    {
+        <div class="flex h-52 items-end bg-gradient-to-br from-lagoon to-sea p-4">
+            <span class="font-display text-2xl font-extrabold text-white">@D.Name</span>
+        </div>
+    }
+    <div class="flex flex-1 flex-col gap-3 p-5">
+        <div class="flex items-center justify-between gap-2">
+            <h3 class="text-xl">@D.Name</h3>
+            <span class="shrink-0 rounded-full bg-sun px-3 py-0.5 text-sm font-bold">@D.Category</span>
+        </div>
+        <p class="text-sm font-bold text-lagoon">@D.Area</p>
+        <p>@D.Summary</p>
+        <button class="chip self-start" @onclick="() => more = !more" aria-expanded="@more">
+            @(more ? "Hide travel tips" : "Show travel tips")
+        </button>
+        @if (more)
+        {
+            <dl class="rounded-xl bg-shell p-4 text-sm">
+                <dt class="font-bold">Best time</dt><dd class="mb-2">@D.BestTime</dd>
+                <dt class="font-bold">Tip</dt><dd>@D.Tip</dd>
+            </dl>
+        }
+    </div>
+</article>
+
+@code {
+    [Parameter, EditorRequired] public Destination D { get; set; } = default!;
+    private bool more;
+}

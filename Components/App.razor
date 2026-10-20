@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿@* <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,4 +17,21 @@
     <script src="_framework/blazor.web.js"></script>
 </body>
 
-</html>
+</html> *@
+
+
+@using MidtermProject.Components.Layout
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <div class="mx-auto max-w-xl px-6 py-24 text-center">
+                <h1 class="text-4xl">That page isn't on the map</h1>
+                <a href="/" class="btn-sea mt-8">Back to home</a>
+            </div>
+        </LayoutView>
+    </NotFound>
+</Router>
