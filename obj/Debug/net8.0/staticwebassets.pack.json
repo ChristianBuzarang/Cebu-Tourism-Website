@@ -25,6 +25,30 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\beach.png",
+      "PackagePath": "staticwebassets\\images\\beach.png"
+    },
+    {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\cebu-guide.png",
+      "PackagePath": "staticwebassets\\images\\cebu-guide.png"
+    },
+    {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\cebu-poster.png",
+      "PackagePath": "staticwebassets\\images\\cebu-poster.png"
+    },
+    {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\lapu-lapu.png",
+      "PackagePath": "staticwebassets\\images\\lapu-lapu.png"
+    },
+    {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\magellans-cross.png",
+      "PackagePath": "staticwebassets\\images\\magellans-cross.png"
+    },
+    {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\temple-of-leah.png",
+      "PackagePath": "staticwebassets\\images\\temple-of-leah.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MidtermProject.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

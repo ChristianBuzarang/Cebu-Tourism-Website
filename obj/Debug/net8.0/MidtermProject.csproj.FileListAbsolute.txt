@@ -29,3 +29,4 @@ C:\Users\L23Y16W08\Documents\MidtermProject\obj\Debug\net8.0\refint\MidtermProje
 C:\Users\L23Y16W08\Documents\MidtermProject\obj\Debug\net8.0\MidtermProject.pdb
 C:\Users\L23Y16W08\Documents\MidtermProject\obj\Debug\net8.0\MidtermProject.genruntimeconfig.cache
 C:\Users\L23Y16W08\Documents\MidtermProject\obj\Debug\net8.0\ref\MidtermProject.dll
+C:\Users\L23Y16W08\Documents\MidtermProject\obj\Debug\net8.0\MidtermProject.sourcelink.json
