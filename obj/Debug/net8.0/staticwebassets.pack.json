@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\bantayan-mangrove.png",
+      "PackagePath": "staticwebassets\\images\\bantayan-mangrove.png"
+    },
+    {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\basilica.png",
+      "PackagePath": "staticwebassets\\images\\basilica.png"
+    },
+    {
       "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\beach.png",
       "PackagePath": "staticwebassets\\images\\beach.png"
     },
@@ -37,12 +45,24 @@
       "PackagePath": "staticwebassets\\images\\cebu-poster.png"
     },
     {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\fort-san-pedro.png",
+      "PackagePath": "staticwebassets\\images\\fort-san-pedro.png"
+    },
+    {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\kawasan-falls.png",
+      "PackagePath": "staticwebassets\\images\\kawasan-falls.png"
+    },
+    {
       "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\lapu-lapu.png",
       "PackagePath": "staticwebassets\\images\\lapu-lapu.png"
     },
     {
       "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\magellans-cross.png",
       "PackagePath": "staticwebassets\\images\\magellans-cross.png"
+    },
+    {
+      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\moalboal-sardines.png",
+      "PackagePath": "staticwebassets\\images\\moalboal-sardines.png"
     },
     {
       "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\temple-of-leah.png",
