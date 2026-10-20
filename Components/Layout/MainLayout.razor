@@ -1,14 +1,23 @@
 ﻿@inherits LayoutComponentBase
+@inject FavoritesService Fav
+@implements IDisposable
 
 <header class="sticky top-0 z-30 border-b-2 border-sea bg-shell/95 backdrop-blur-sm">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3" aria-label="Main">
         <a href="/" class="font-display text-2xl font-extrabold">Visit Cebu</a>
         <button class="chip md:hidden" @onclick="() => open = !open" aria-expanded="@open">Menu</button>
         <ul class="@(open ? "flex" : "hidden") absolute left-0 right-0 top-full flex-col gap-1 border-b-2 border-sea bg-shell p-4 md:static md:flex md:flex-row md:gap-2 md:border-0 md:bg-transparent md:p-0">
-            <li><NavLink class="rounded-full px-4 py-2 font-bold hover:bg-sun" ActiveClass="bg-sun" Match="NavLinkMatch.All" href="/" @onclick="Close">Home</NavLink></li>
+            @* <li><NavLink class="rounded-full px-4 py-2 font-bold hover:bg-sun" ActiveClass="bg-sun" Match="NavLinkMatch.All" href="/" @onclick="Close">Home</NavLink></li>
             <li><NavLink class="rounded-full px-4 py-2 font-bold hover:bg-sun" ActiveClass="bg-sun" href="/destinations" @onclick="Close">Destinations</NavLink></li>
             <li><NavLink class="rounded-full px-4 py-2 font-bold hover:bg-sun" ActiveClass="bg-sun" href="/itinerary" @onclick="Close">4-day itinerary</NavLink></li>
-            <li><NavLink class="rounded-full bg-sea px-4 py-2 font-bold text-white hover:bg-lagoon" href="/plan" @onclick="Close">Plan my trip</NavLink></li>
+            <li><NavLink class="rounded-full bg-sea px-4 py-2 font-bold text-white hover:bg-lagoon" href="/plan" @onclick="Close">Plan my trip</NavLink></li> *@
+            <li><NavLink class="rounded-full px-4 py-2 font-bold hover:bg-sun" ActiveClass="bg-sun" href="/destinations" @onclick="Close">
+                Destinations
+                @if (Fav.Count > 0)
+                {
+                    <span class="ml-1 rounded-full bg-hibiscus px-2 py-0.5 text-xs text-white">@Fav.Count</span>
+                }
+            </NavLink></li>
         </ul>
     </nav>
 </header>
@@ -25,4 +34,8 @@
 @code {
     private bool open;
     private void Close() => open = false;
+
+    protected override void OnInitialized() => Fav.Changed += Refresh;
+    private void Refresh() => InvokeAsync(StateHasChanged);
+    public void Dispose() => Fav.Changed -= Refresh;
 }

@@ -1,9 +1,15 @@
 @page "/plan"
 @using System.ComponentModel.DataAnnotations
+@inject FavoritesService Fav
 <PageTitle>Plan my trip | Visit Cebu</PageTitle>
 
 <section class="mx-auto max-w-xl px-6 py-14">
     <h1 class="text-4xl md:text-5xl">Plan my trip</h1>
+
+    @if (Fav.Count > 0)
+    {
+        <p class="mt-4 rounded-xl bg-shell p-4">Your saved places: <strong>@string.Join(", ", Fav.Saved)</strong></p>
+    }
 
     @if (sent)
     {

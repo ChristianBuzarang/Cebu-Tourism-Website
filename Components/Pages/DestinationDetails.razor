@@ -1,24 +1,60 @@
 @page "/destinations"
 @inject DestinationService Svc
+@inject FavoritesService Fav
+@implements IDisposable
 <PageTitle>Destinations | Visit Cebu</PageTitle>
 
 <section class="mx-auto max-w-6xl px-6 py-14">
     <h1 class="text-4xl md:text-6xl">Where to go in Cebu</h1>
-    <p class="mt-4 max-w-xl text-lg">Filter by the kind of day you want.</p>
 
-    <div class="mt-8 flex flex-wrap gap-2" role="group" aria-label="Filter destinations">
+    <label class="mt-8 block max-w-md font-bold">Search places
+        <input type="search" @bind="query" @bind:event="oninput" placeholder="Try &quot;falls&quot; or &quot;Mactan&quot;"
+               class="mt-1 w-full rounded-full border-2 border-sea bg-white px-5 py-3 font-normal" />
+    </label>
+
+    <div class="mt-5 flex flex-wrap gap-2" role="group" aria-label="Filter destinations">
         @foreach (var c in Svc.Categories)
         {
             <button class="chip @(c == selected ? "chip-on" : "")" aria-pressed="@(c == selected)" @onclick="() => selected = c">@c</button>
         }
+        <button class="chip @("Saved" == selected ? "chip-on" : "")" aria-pressed="@("Saved" == selected)" @onclick='() => selected = "Saved"'>Saved (@Fav.Count)</button>
     </div>
 
-    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        @foreach (var d in Svc.ByCategory(selected))
-        {
-            <DestinationCard D="d" />
-        }
-    </div>
+    @{ var results = Results.ToList(); }
+    <p class="mt-6 font-bold text-lagoon" aria-live="polite">@results.Count place@(results.Count == 1 ? "" : "s") found</p>
+
+    @if (results.Count == 0)
+    {
+        <p class="mt-6 rounded-2xl bg-sun/40 p-6">
+            @(selected == "Saved" && string.IsNullOrWhiteSpace(query)
+                ? "You haven't saved any places yet. Tap the heart on a card to add one."
+                : "No places match your search. Try a different word or choose All.")
+        </p>
+    }
+    else
+    {
+        <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            @foreach (var d in results)
+            {
+                <DestinationCard D="d" />
+            }
+        </div>
+    }
 </section>
 
-@code { private string selected = "All"; }
+@code {
+    private string selected = "All";
+    private string query = "";
+
+    private IEnumerable<Destination> Results =>
+        Svc.ByCategory(selected == "Saved" ? "All" : selected)
+           .Where(d => selected != "Saved" || Fav.IsSaved(d.Name))
+           .Where(d => string.IsNullOrWhiteSpace(query)
+                    || d.Name.Contains(query, StringComparison.OrdinalIgnoreCase)
+                    || d.Area.Contains(query, StringComparison.OrdinalIgnoreCase)
+                    || d.Summary.Contains(query, StringComparison.OrdinalIgnoreCase));
+
+    protected override void OnInitialized() => Fav.Changed += Refresh;
+    private void Refresh() => InvokeAsync(StateHasChanged);
+    public void Dispose() => Fav.Changed -= Refresh;
+}
