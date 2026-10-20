@@ -1,10 +1,11 @@
 using MidtermProject.Components;
+using MidtermProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+builder.Services.AddScoped<DestinationService>();
 
 var app = builder.Build();
 
