@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply font-body bg-shell text-sea antialiased; }
+  h1, h2, h3 { @apply font-display font-extrabold tracking-tight; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-hibiscus;
+  }
+}
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-bold transition-colors; }
+  .btn-sun { @apply btn bg-sun text-sea hover:bg-yellow-300; }
+  .btn-sea { @apply btn bg-sea text-white hover:bg-lagoon; }
+  .chip { @apply rounded-full border-2 border-sea px-4 py-1.5 text-sm font-bold transition-colors; }
+  .chip-on { @apply bg-sea text-white; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
