@@ -13,10 +13,10 @@ public class DestinationService
             "Go early in the morning, before the heat and the tour groups.", "Any time, free entry", "images/magellans-cross.png"),
         new("Basilica del Santo Niño", "Cebu City", "History",
             "The oldest Roman Catholic church in the country, built beside the cross and home to the Santo Niño image given by Magellan.",
-            "Dress modestly. Masses are crowded on Fridays and Sundays.", "Any time"),
+            "Dress modestly. Masses are crowded on Fridays and Sundays.", "Any time", "images/basilica.png"),
         new("Fort San Pedro", "Cebu City", "History",
             "A triangular Spanish fort by the harbour, with stone walls, cannon bastions and a quiet courtyard garden.",
-            "Pair it with the cross and basilica; all three are within walking distance.", "Morning or late afternoon"),
+            "Pair it with the cross and basilica; all three are within walking distance.", "Morning or late afternoon", "images/fort-san-pedro.png"),
         new("Lapu-Lapu Shrine", "Mactan Island", "History",
             "A bronze statue of Datu Lapu-Lapu, who led the Mactan warriors that stopped Magellan in the Battle of Mactan.",
             "Visit before or after an island-hopping trip, since it is on the way.", "Any time, free entry", "images/lapu-lapu.png"),
@@ -28,13 +28,13 @@ public class DestinationService
             "Day passes are available at most beach clubs if you aren't staying overnight.", "November to May", "images/beach.png"),
         new("Kawasan Falls", "Badian", "Adventure",
             "Three-tiered turquoise falls and the starting point for canyoneering through the Matutinao River gorge.",
-            "Book a licensed guide for canyoneering and bring water shoes.", "Dry season, early morning"),
+            "Book a licensed guide for canyoneering and bring water shoes.", "Dry season, early morning", "images/kawasan-falls.png"),
         new("Moalboal Sardine Run", "Moalboal", "Adventure",
             "Millions of sardines swirl just off Panagsama Beach, close enough to reach with a snorkel from shore.",
-            "Stay calm in the water and never touch the sardines or the turtles.", "Year-round, mornings are best"),
+            "Stay calm in the water and never touch the sardines or the turtles.", "Year-round, mornings are best", "images/moalboal-sardines.png"),
         new("Bantayan Island", "North Cebu", "Beaches",
-            "Powder-white beaches, slow island roads and fresh seafood, a few hours from Cebu City by road and ferry.",
-            "Rent a motorbike or tricycle to reach Sugar Beach and Paradise Beach.", "December to May")
+            "Powder-white beaches, a mangrove boardwalk at Omagieca Eco Park and fresh seafood, a few hours from Cebu City by road and ferry.",
+            "Rent a motorbike or tricycle to reach Sugar Beach, Paradise Beach and the mangroves.", "December to May", "images/bantayan-mangrove.png")
     };
 
     public IEnumerable<Destination> ByCategory(string category) =>
