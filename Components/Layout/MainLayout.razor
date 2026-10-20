@@ -1,4 +1,4 @@
-﻿@inherits LayoutComponentBase
+﻿@* @inherits LayoutComponentBase
 
 <div class="page">
     <div class="sidebar">
@@ -20,4 +20,36 @@
     An unhandled error has occurred.
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
-</div>
+</div> *@
+
+
+
+
+@inherits LayoutComponentBase
+
+<header class="sticky top-0 z-30 border-b-2 border-sea bg-shell/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3" aria-label="Main">
+        <a href="/" class="font-display text-2xl font-extrabold">Visit Cebu</a>
+        <button class="chip md:hidden" @onclick="() => open = !open" aria-expanded="@open">Menu</button>
+        <ul class="@(open ? "flex" : "hidden") absolute left-0 right-0 top-full flex-col gap-1 border-b-2 border-sea bg-shell p-4 md:static md:flex md:flex-row md:gap-2 md:border-0 md:bg-transparent md:p-0">
+            <li><NavLink class="rounded-full px-4 py-2 font-bold hover:bg-sun" ActiveClass="bg-sun" Match="NavLinkMatch.All" href="/" @onclick="Close">Home</NavLink></li>
+            <li><NavLink class="rounded-full px-4 py-2 font-bold hover:bg-sun" ActiveClass="bg-sun" href="/destinations" @onclick="Close">Destinations</NavLink></li>
+            <li><NavLink class="rounded-full px-4 py-2 font-bold hover:bg-sun" ActiveClass="bg-sun" href="/itinerary" @onclick="Close">4-day itinerary</NavLink></li>
+            <li><NavLink class="rounded-full bg-sea px-4 py-2 font-bold text-white hover:bg-lagoon" href="/plan" @onclick="Close">Plan my trip</NavLink></li>
+        </ul>
+    </nav>
+</header>
+
+<main>@Body</main>
+
+<footer class="mt-24 bg-sea text-white">
+    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 md:flex-row md:justify-between">
+        <p class="font-display text-xl font-extrabold">Visit Cebu</p>
+        <p class="text-white/80">Midterm project · Blazor WebAssembly and Tailwind CSS · Photos from the class project files</p>
+    </div>
+</footer>
+
+@code {
+    private bool open;
+    private void Close() => open = false;
+}
