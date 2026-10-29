@@ -36,7 +36,8 @@
         <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             @foreach (var d in results)
             {
-                <DestinationCard D="d" />
+                <DestinationCard D="d" 
+                                 @bind-ActiveDestination="activeDestination" />
             }
         </div>
     }
@@ -45,6 +46,7 @@
 @code {
     private string selected = "All";
     private string query = "";
+    private string? activeDestination; // Tracks which card's travel tips are open
 
     private IEnumerable<Destination> Results =>
         Svc.ByCategory(selected == "Saved" ? "All" : selected)

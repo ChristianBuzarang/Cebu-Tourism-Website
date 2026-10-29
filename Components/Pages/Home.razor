@@ -21,7 +21,7 @@
         <div class="mt-8 grid gap-6 md:grid-cols-3">
             @foreach (var d in featured)
             {
-                <DestinationCard D="d" />
+                <DestinationCard D="d" @bind-ActiveDestination="activeDestination" />
             }
         </div>
     </div>
@@ -43,6 +43,8 @@
 
 @code {
     private List<Destination> featured = new();
+    private string? activeDestination; // Tracks the currently open card on the home page
+
     protected override void OnInitialized() =>
         featured = Svc.All.Where(d => d.Name is "Magellan's Cross" or "Temple of Leah" or "Mactan Beaches").ToList();
 }
