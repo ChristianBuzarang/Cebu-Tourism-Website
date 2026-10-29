@@ -1,71 +1,71 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MidtermProject.bundle.scp.css",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MidtermProject.bundle.scp.css",
       "PackagePath": "staticwebassets\\MidtermProject.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\app.css",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\bantayan-mangrove.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\bantayan-mangrove.png",
       "PackagePath": "staticwebassets\\images\\bantayan-mangrove.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\basilica.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\basilica.png",
       "PackagePath": "staticwebassets\\images\\basilica.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\beach.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\beach.png",
       "PackagePath": "staticwebassets\\images\\beach.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\cebu-guide.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\cebu-guide.png",
       "PackagePath": "staticwebassets\\images\\cebu-guide.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\cebu-poster.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\cebu-poster.png",
       "PackagePath": "staticwebassets\\images\\cebu-poster.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\fort-san-pedro.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\fort-san-pedro.png",
       "PackagePath": "staticwebassets\\images\\fort-san-pedro.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\kawasan-falls.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\kawasan-falls.png",
       "PackagePath": "staticwebassets\\images\\kawasan-falls.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\lapu-lapu.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\lapu-lapu.png",
       "PackagePath": "staticwebassets\\images\\lapu-lapu.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\magellans-cross.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\magellans-cross.png",
       "PackagePath": "staticwebassets\\images\\magellans-cross.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\moalboal-sardines.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\moalboal-sardines.png",
       "PackagePath": "staticwebassets\\images\\moalboal-sardines.png"
     },
     {
-      "Id": "C:\\Users\\L23Y16W08\\Documents\\MidtermProject\\wwwroot\\images\\temple-of-leah.png",
+      "Id": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\images\\temple-of-leah.png",
       "PackagePath": "staticwebassets\\images\\temple-of-leah.png"
     },
     {
