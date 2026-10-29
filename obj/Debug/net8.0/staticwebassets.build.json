@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9rvNQvetsMRLXYLpPIfNZcjZ6SE4+GuP/ZwZhv2YHwM=",
+  "Hash": "WNup5CD+eGkxZI4uUcBlwkSaUtDetDagIUE+FNvuT9U=",
   "Source": "MidtermProject",
   "BasePath": "_content/MidtermProject",
   "Mode": "Default",
@@ -110,25 +110,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\css\\app.css",
-      "SourceId": "MidtermProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\",
-      "BasePath": "_content/MidtermProject",
-      "RelativePath": "css/app.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
       "Identity": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\favicon.png",
