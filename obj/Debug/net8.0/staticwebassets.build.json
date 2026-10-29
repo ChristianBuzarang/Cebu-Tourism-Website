@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9rvNQvetsMRLXYLpPIfNZcjZ6SE4+GuP/ZwZhv2YHwM=",
+  "Hash": "ebDTac4Bs53ZIauzsMnI0zt2LKCvY4eMle9PH+FkeQ0=",
   "Source": "MidtermProject",
   "BasePath": "_content/MidtermProject",
   "Mode": "Default",
@@ -53,25 +53,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MidtermProject.bundle.scp.css"
-    },
-    {
-      "Identity": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\app.css",
-      "SourceId": "MidtermProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\",
-      "BasePath": "_content/MidtermProject",
-      "RelativePath": "app.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
       "Identity": "C:\\Users\\L23Y16W08\\Downloads\\Cebu-Tourism-Website\\wwwroot\\bootstrap\\bootstrap.min.css",
